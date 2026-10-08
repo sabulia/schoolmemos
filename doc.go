@@ -1,7 +1,8 @@
-// Package server is the HTTP process: it boots the Echo server, mounts every
-// transport (server/api/v1, server/fileserver, server/frontend, server/mcp),
-// and owns HTTP-only concerns such as auth tokens and process configuration.
+// Package store is the persistence layer: the Store facade, the Driver
+// interface implemented by store/db/{sqlite,mysql,postgres,d1}, migrations, seed
+// data, and the in-memory cache.
 //
-// Layering: server may import core, store, provider, markdown, filter, and
-// internal. Nothing imports server except cmd.
-package server
+// Layering: store may import provider, markdown, filter, proto/gen, and
+// internal. It must not import core or server; business rules that need
+// several store calls live in core.
+package store
