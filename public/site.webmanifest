@@ -1,0 +1,22 @@
+{
+  "name": "校园Memo",
+  "short_name": "校园Memo",
+  "description": "校园轻应用：好友、群、圈、话题、推荐与主题分类",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "#faf9f5",
+  "background_color": "#faf9f5"
+}
