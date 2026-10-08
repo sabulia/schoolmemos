@@ -1,0 +1,65 @@
+/* 校园版界面个性化样式（本项目新增）。
+   默认简洁；用户可在「我的-设置-界面个性化」为每个分区设置
+   静态壁纸（image:<url>）或动态画面（animated:<名称>，仿手机动态壁纸）。 */
+
+.campus-section {
+  min-height: 60vh;
+  border-radius: 0.75rem;
+}
+
+.campus-section-image {
+  padding: 1rem;
+}
+
+.campus-section-image > * {
+  /* 壁纸上内容加底，保证可读性 */
+}
+
+/* 动态画面：极光 */
+.campus-animated-aurora {
+  background: linear-gradient(120deg, #0f172a, #1e3a8a, #0f766e, #0f172a);
+  background-size: 300% 300%;
+  animation: campus-aurora 14s ease-in-out infinite;
+  padding: 1rem;
+}
+
+/* 动态画面：日落 */
+.campus-animated-sunset {
+  background: linear-gradient(160deg, #f59e0b, #ef4444, #7c3aed, #f59e0b);
+  background-size: 300% 300%;
+  animation: campus-aurora 18s ease-in-out infinite;
+  padding: 1rem;
+}
+
+/* 动态画面：海洋 */
+.campus-animated-ocean {
+  background: linear-gradient(160deg, #0ea5e9, #2563eb, #06b6d4, #0ea5e9);
+  background-size: 300% 300%;
+  animation: campus-aurora 16s ease-in-out infinite;
+  padding: 1rem;
+}
+
+@keyframes campus-aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 动态背景上的卡片提高不透明度，保证文字清晰 */
+.campus-animated-aurora .bg-card,
+.campus-animated-sunset .bg-card,
+.campus-animated-ocean .bg-card {
+  background-color: rgb(255 255 255 / 0.92);
+}
+
+.dark .campus-animated-aurora .bg-card,
+.dark .campus-animated-sunset .bg-card,
+.dark .campus-animated-ocean .bg-card {
+  background-color: rgb(24 24 27 / 0.9);
+}
